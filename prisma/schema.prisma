@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Product {
+  id          String   @id @default(uuid())
+  name        String
+  description String
+  price       Decimal  @db.Decimal(10, 2)
+  images      String[]
+  category    Category
+  sizes       Size[]
+  featured    Boolean  @default(false)
+  inStock     Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([category])
+  @@index([featured])
+  @@index([inStock])
+  @@index([createdAt(sort: Desc)])
+  @@index([category, featured])
+}
+
+enum Category {
+  MEN
+  WOMEN
+  KIDS
+}
+
+enum Size {
+  XS
+  S
+  M
+  L
+  XL
+  XXL
+}

@@ -1,0 +1,46 @@
+{
+  "name": "midnight-emerald",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "db:generate": "prisma generate",
+    "db:migrate": "dotenv -e .env -- prisma migrate dev",
+    "db:push": "dotenv -e .env -- prisma db push",
+    "db:studio": "dotenv -e .env -- prisma studio",
+    "postinstall": "dotenv -e .env -- prisma generate"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^7.2.9",
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "@uploadthing/react": "^7.3.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "dotenv": "^16.5.0",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^0.503.0",
+    "next": "^16.2.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "sonner": "^2.0.7",
+    "svix": "^1.62.0",
+    "tailwind-merge": "^3.5.0",
+    "uploadthing": "^7.7.4",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.0",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "dotenv-cli": "^8.0.0",
+    "postcss": "^8.5.3",
+    "prisma": "^7.8.0",
+    "tailwindcss": "^4.2.0",
+    "typescript": "^5.8.3"
+  }
+}
