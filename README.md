@@ -156,10 +156,3 @@ vercel postgres create
 - Secure database queries with Prisma
 - Environment variables for secrets
 
-## 📝 License
-
-MIT License - feel free to use for commercial projects.
-
-## 🆘 Support
-
-For issues or questions, please open a GitHub issue.
